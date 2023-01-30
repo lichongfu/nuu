@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>li chong fu's web</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link href="images/1.png" rel="icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="host_version"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">顧客登入</h4>
+			</div>
+			<div class="modal-body customer-box">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li><a class="active" href="#Login" data-toggle="tab">登入</a></li>
+					<li><a href="#Registration" data-toggle="tab">註冊</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="Login">
+						<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email1" placeholder="Name" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="exampleInputPassword1" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										提交
+									</button>
+									<a class="for-pwd" href="javascript:;">忘記密碼?</a>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="tab-pane" id="Registration">
+						<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" placeholder="Name" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="mobile" placeholder="Mobile" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="password" placeholder="Password" type="password">
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										儲存 &amp; 繼續
+									</button>
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										結束</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+	
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/2.png" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="index.html">主頁</a></li>
+						<li class="nav-item"><a class="nav-link" href="#about">關於聯大</a></li>
+						<li class="nav-item "><a class="nav-link dropdown-toggle" href="#history">聯大歷史 </a></li>
+						<li class="nav-item"><a class="nav-link" href="#fee">聯大費用</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">聯大師資 </a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="#teacher">師資 </a>
+								<a class="dropdown-item" href="https://www.nuu.edu.tw/p/412-1000-377.php" target="_blank">其他行政單位 </a>
+							</div>
+						</li>
+                        <li class="nav-item"><a class="nav-link" href="#">聯大文創</a></li>
+                        <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">我的作品 </a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="#" target="_blank">大一作品</a>
+								<a class="dropdown-item" href="#" target="_blank">大二作品</a>
+                                <a class="dropdown-item" href="#" target="_blank">大三作品</a>
+                                <a class="dropdown-item" href="#" target="_blank">大四作品</a>
+							</div>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>成為會員</span></a></li>
+                    </ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="1"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<div id="home" class="first-section" style="background-image:url('images/3.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-center">
+									<div class="big-tagline">
+										<h2><strong>國立 </strong> 聯合大學</h2>
+										<p class="lead">歡迎來到來自苗栗的國立聯合大學，讓我們一同認識聯合大學</p>
+											<a href="https://www.nuu.edu.tw/" target="_blank" class="hover-btn-new"><span>校網連結</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="https://www.youtube.com/watch?v=iKhBcLrgQ3Q" target="_blank" class="hover-btn-new"><span>了解更多</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/4.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-left">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight"><strong>文化創意</strong>與<strong>數位行銷</strong>學系</h2>
+										<p class="lead" data-animation="animated fadeInLeft">教育目標在於培養高端文創產業（包括數位科技、創意設計與數位行銷等新興領域）之專業人才，作為客家文創的搖籃且主要發展方向有三：「文創商品設計」、「數位行銷」與「產業經營」 </p>
+											<a href="https://ccdm.nuu.edu.tw/" target="_blank" class="hover-btn-new"><span>系所網站</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="https://sdas42.wordpress.com" target="_blank" class="hover-btn-new"><span>了解更多</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/5.png');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-left">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight">我的<strong>作品專區</strong></h2>
+										<p class="lead" data-animation="animated fadeInLeft">文創系成長歷程:大一~大四的作品整合&成長</p>
+											<a href="https://instagram.com/lichongfu" target="_blank" class="hover-btn-new"><span>聯絡我</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="#" class="hover-btn-new"><span>了解更多</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<!-- Left Control -->
+			<a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="fa fa-angle-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+
+			<!-- Right Control -->
+			<a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="fa fa-angle-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section wb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div id="about" class="col-md-8 offset-md-2">
+                    <h3>關於聯大</h3>
+                    <p style="text-align: left;" class="lead">本校現有「第一（二坪山）」及「第二（八甲）」兩個校區，相距約2.6公里，面積合計77公頃，前擁三巒疊翠，側有後龍溪環繞，山川秀麗、景色宜人。校區鄰近國道一號、國道三號交流道及苗栗火車站與苗栗高鐵站，交通便捷；兼以北處竹科、國衛院、竹北生技等園區，南靠銅鑼園區、中科基地，更利於在地產、學、研鏈結合作。</p>
+                </div>
+            </div><!-- end title -->
+        
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>二坪校區</h2>
+                        <p>校本部面積8.0031 公頃(二坪山西校區面積6.4950公頃)，座落於苗栗市恭敬里聯大 1 號，即苗栗市南苗地區，緊鄰台 6 省道 (此處與台 13 省道重覆)，距離第一高速公路苗栗交流道約 6 分鐘車程，距離第二高速公路後龍交流道約 8 分鐘車程。</p>
+
+                        <p> <mark>管理學院</mark>--經營管理學系、資訊管理學系、財務金融學系<br>
+                            <mark>設計學院</mark>--建築學系、工業設計學系、原住民學士學位學程專班
+                        </p>
+
+                        <a href="https://www.nuu.edu.tw/var/file/0/1000/img/40/263112305.jpg" target="_blank" class="hover-btn-new orange"><span>校區地圖</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/6.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/7.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>八甲校區</h2>
+                        <p>已開發面積 56.1707 公頃(待分期分區開發面積6.0475公頃)，樓地板總面積53,011.32 平方公尺，位於苗栗縣苗栗市南勢坑八甲地區。</p>
+
+                        <p> <mark>客家研究學院</mark>--文化觀光產業學系、文化創意與數位行銷學系<br>
+                            <mark>人文與社會學院</mark>--臺灣語文與傳播學系、華語文學系<br>
+                            <mark>電機資訊學院</mark>--電機工程學系、電子工程學系、光電工程學系、資訊工程學系<br>                           
+                            <mark>理工學院</mark>--機械工程學系、化學工程學系、土木與防災工程學系、材料科學工程學系、環境與安全衛生工程學系、能源工程學系                      
+                        </p>
+
+                        <a href="https://www.nuu.edu.tw/var/file/0/1000/img/40/552416383.jpg" target="_blank" class="hover-btn-new orange"><span>校區地圖</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <section class="section lb page-section">
+		<div class="container">
+			 <div class="section-title row text-center">
+                <div id="history" class="col-md-8 offset-md-2">
+                    <h3>聯大歷史</h3>
+                    <p style="text-align: left;" class="lead">國立聯合大學，簡稱聯大，位於臺灣苗栗縣的國立大學，原為經濟部指派專員聯合地方公、民營事業及地方仕紳籌設「私立聯合工業技藝專科學校」，於1995年由董事會捐贈予中華民國政府並改隸為國立學校，後於2003年改制為大學並更為現名，由經濟部與國內大型國營事業、民營企業單位聯合集資，苗栗縣政府捐地，故名曰「聯合」。</p>
+                </div>
+            </div><!-- end title -->
+			<div class="timeline">
+				<div class="timeline__wrap">
+					<div class="timeline__items">
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2 style="color: rgb(88, 88, 88);">2003</h2>
+								<p style="color: rgb(88, 88, 88);"><strong>改名為「國立聯合大學」，成立理工、電機資訊、管理、技術等四個學院及共同教育委員會、「全球客家研究中心」。同年，八甲校區整地工程開始。</strong></p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2 style="color: rgb(88, 88, 88);">1999</h2>
+								<p style="color: rgb(88, 88, 88);"><strong>改制為「國立聯合技術學院」</strong></p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2 style="color: rgb(88, 88, 88);">1995</h2>
+								<p style="color: rgb(88, 88, 88);"><strong>學校董事會決議將學校改隸予教育部，且定名為「國立聯合工商專科學校」</strong></p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2 style="color: rgb(88, 88, 88);">1992</h2>
+								<p style="color: rgb(88, 88, 88);"><strong>增設商業類科，更改校名為「私立聯合工商專科學校」</strong></p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2 style="color: rgb(88, 88, 88);">1973</h2>
+								<p style="color: rgb(88, 88, 88);"><strong>教育部核定變更校名為「私立聯合工業專科學校」，參加二專聯合招生，限制高工畢業生始能報考</strong></p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2 style="color: rgb(88, 88, 88);">1972</h2>
+								<p style="color: rgb(88, 88, 88);"><strong>教育部核准立案招生，校名為「私立聯合工業技藝專科學校」</strong></p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2 style="color: rgb(88, 88, 88);">1969</h2>
+								<p style="color: rgb(88, 88, 88);"><strong>經濟部部長李國鼎主導國內大型國營事業、民營企業聯合出資及苗栗縣政府捐地與購入國立中央大學地球物理研究所舊址校舍，創設「私立聯合工業技藝專科學校」</strong></p>
+							</div>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="section cl">
+		<div class="container">
+			<div class="row text-left stat-wrap">
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-study"></i></span>
+					<p class="stat_count">6</p>
+					<h3>學院</h3>                   
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-online"></i></span>
+					<p class="stat_count">19</p>
+					<h3>學系（含15個碩士班）</h3>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-years"></i></span>
+					<p class="stat_count">1</p>
+					<h3>原住民專班、獨立研究所、博士學位學程</h3>
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</div><!-- end section -->
+
+    <div id="plan" class="section lb">
+        <div class="container">
+            <div id="fee" class="section-title text-center">
+                <h3>聯大費用</h3>
+                <p>聯大學生日間學士班收費標準如下~</p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="message-box">
+                        <ul class="nav nav-pills nav-stacked" id="myTabs">
+                            <li><a class="active" href="#tab1" data-toggle="pill">㇐般學生<br>收費標準</a></li>
+                            <li><a href="#tab2" data-toggle="pill">111 學年度以後入學外國及大陸學生收費標準</a></li>
+                        </ul>
+                    </div>
+                </div><!-- end col -->
+            </div>
+
+            <hr class="invis">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-content">
+                        <div class="tab-pane active fade show" id="tab1">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>理工學院 
+                                                電機資訊學院 
+                                                設計學院 
+                                                資訊管理學系
+                                            </h2>                                            
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-book"></i> <strong>16900</strong> 學費</p>
+                                            <p><i class="fa fa-briefcase"></i> <strong>9100</strong> 雜費</p>
+                                            <p><i class="fa fa-database"></i> <strong>26000</strong> 學雜費合計</p>
+                                            <p><i class="fa fa-graduation-cap"></i> <strong>1030*學分數</strong> 學分費</p>                    
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="https://reg.nuu.edu.tw/p/406-1024-10170,r622.php?Lang=zh-tw" target="_blank" class="hover-btn-new orange"><span>學雜費專區</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>管理學院<br> 
+                                                (不含資訊管理學系)
+                                            </h2>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-book"></i> <strong>14690</strong> 學費</p>
+                                            <p><i class="fa fa-briefcase"></i> <strong>7910</strong> 雜費</p>
+                                            <p><i class="fa fa-database"></i> <strong>22600</strong> 學雜費合計</p>
+                                            <p><i class="fa fa-graduation-cap"></i> <strong>960*學分數</strong> 學分費</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="https://aca.nuu.edu.tw/p/412-1006-3752.php?Lang=zh-tw" target="_blank" class="hover-btn-new orange"><span>學雜費流程</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>客家研究學院<br>
+                                                人文與社會學院
+                                            </h2>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-book"></i> <strong>14485</strong> 學費</p>
+                                            <p><i class="fa fa-briefcase"></i> <strong>7800</strong> 雜費</p>
+                                            <p><i class="fa fa-database"></i> <strong>22285</strong> 學雜費合計</p>
+                                            <p><i class="fa fa-graduation-cap"></i> <strong>960*學分數</strong> 學分費</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="https://nss.nuu.edu.tw/p/412-1037-4434.php?Lang=zh-tw" target="_blank" class="hover-btn-new orange"><span>繳費單與繳費</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end pane -->
+
+                        <div class="tab-pane fade" id="tab2">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>理工學院 
+                                                電機資訊學院 
+                                                設計學院 
+                                                資訊管理學系
+                                            </h2>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-book"></i> <strong>28000</strong> 學費</p>
+                                            <p><i class="fa fa-briefcase"></i> <strong>17000</strong> 雜費</p>
+                                            <p><i class="fa fa-database"></i> <strong>45000</strong> 學雜費合計</p>
+                                            <p><i class="fa fa-graduation-cap"></i> <strong>2060*學分數</strong> 學分費</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="https://reg.nuu.edu.tw/p/406-1024-10170,r622.php?Lang=zh-tw" target="_blank" class="hover-btn-new orange"><span>學雜費專區</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>管理學院<br> 
+                                                (不含資訊管理學系)
+                                            </h2>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-book"></i> <strong>27000</strong> 學費</p>
+                                            <p><i class="fa fa-briefcase"></i> <strong>12000</strong> 雜費</p>
+                                            <p><i class="fa fa-database"></i> <strong>39000</strong> 學雜費合計</p>
+                                            <p><i class="fa fa-graduation-cap"></i> <strong>1920*學分數</strong> 學分費</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="https://aca.nuu.edu.tw/p/412-1006-3752.php?Lang=zh-tw" target="_blank" class="hover-btn-new orange"><span>學雜費流程</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>客家研究學院<br>
+                                                人文與社會學院
+                                            </h2>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-book"></i> <strong>27000</strong> 學費</p>
+                                            <p><i class="fa fa-briefcase"></i> <strong>12000</strong> 雜費</p>
+                                            <p><i class="fa fa-database"></i> <strong>39000</strong> 學雜費合計</p>
+                                            <p><i class="fa fa-graduation-cap"></i> <strong>1920*學分數</strong> 學分費</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="https://nss.nuu.edu.tw/p/412-1037-4434.php?Lang=zh-tw" target="_blank" class="hover-btn-new orange"><span>繳費單與繳費</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end pane -->
+                    </div><!-- end content -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('images/14.png');">
+        <div class="container">
+            <div id="teacher" class="section-title text-center">
+                <h3>聯大師資</h3>
+                <p>聯合大學現任的強大師資陣容如下~</p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                <img src="images/8.jpg" alt="" class="img-fluid">
+                                <h4>校長 李偉賢 博士 </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-thumbs-o-up "></i> 研究成果及著作!</h3>
+                                <p style="text-align: left;" class="lead">個人任教期間，積極從事與高速撞擊及奈米薄膜壓痕特性與製程開發等相關領域之學術研究。截至目前為止，共計發表了SCI國際學術期刊論文185篇，會議論文165篇及其他著作20篇；另有22篇國際學術研討會邀請演講。論文被引用數達2565餘次，h-index 28。</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                <img src="images/9.jpg" alt="" class="img-fluid">
+                                <h4>副校長 柳文成 博士 </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-thumbs-o-up"></i> 專長!</h3>
+                                <p class="lead"> 防災與生態工程、環境流力、水理水質與泥砂模擬、<br>環境監測、氣候變遷</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                <img src="images/10.jpg" alt="" class="img-fluid ">
+                                <h4>副校長 侯帝光 博士 </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-thumbs-o-up"></i> 專長!</h3>
+                                <p class="lead"> 微機電系統設計、微細加工、光機電系統整合、微型機器人 </p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                <img src="images/11.jpg" alt="" class="img-fluid">
+                                <h4>學務長 吳翠松 教授 </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-thumbs-o-up"></i> 業務職掌!</h3>
+                                <p class="lead">綜理全盤本處業務。<br>現職國立聯合大學客家研究學院 客家語言與傳播研究所教授<br>國立聯合大學學生事務長</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                <img src="images/12.png" alt="" class="img-fluid">
+                                <h4>主任秘書 李宜穆 教授 </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-thumbs-o-up"></i>研究專長!</h3>
+                                <p class="lead">奈米材料、固態電子、元件製程與電性分析</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                <img src="images/13.png" alt="" class="img-fluid">
+                                <h4>共同教育委員會主任委員 張陳基 教授 </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-thumbs-o-up"></i> 業務職掌!</h3>
+                                <p class="lead">綜理共教會全盤業務 </p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div><!-- end testimonial -->
+                    </div><!-- end carousel -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div class="parallax section dbcolor">
+        <div class="container">
+            <div class="row logos">
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://president.nuu.edu.tw/" target="_blank"><img src="images/8.jpg" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://vice.nuu.edu.tw/p/406-1002-25820,r728.php?Lang=zh-tw" target="_blank"><img src="images/9.jpg" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://vice.nuu.edu.tw/p/406-1002-375,r728.php?Lang=zh-tw" target="_blank"><img src="images/10.jpg" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://stua01.nuu.edu.tw/p/405-1004-1028,c521.php?Lang=zh-tw" target="_blank"><img src="images/11.jpg" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://secretary.nuu.edu.tw/p/412-1003-185.php?Lang=zh-tw" target="_blank"><img src="images/12.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://ceg.nuu.edu.tw/p/405-1021-12770,c3236.php?Lang=zh-tw" target="_blank"><img src="images/13.png" alt="" class="img-repsonsive"></a>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>聯大特色</h3>
+                        </div>
+                        <p> 本校強化「在地文化」、「優質教學」、「研究創新」及「社會服務」四大願景規劃。以I2-GO科技分別代表著整合、智慧、環保概念的綠色科技、以及強調人本關懷健康照護相關科技為訴求的橘色科技為發展主軸。結合醫療科技產業開創醫院與綜合大學合作的最佳模式，積極推動多元人才培訓，提高國際行動力，擴大產、學、研在地策略聯盟，強化學生產學實習與就業能力以提昇畢業競爭力。積極轉型國內第一所醫學工業大學，鏈結在地高中/職，扮演社會智庫的功能，以建構苗栗大學城為終極目標。</p>   
+						<div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="https://www.facebook.com/NUU1969/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://instagram.com/nuusa_037381240?igshid=MDM4ZDc5MmU=" target="_blank"><i class="fa fa-instagram"></i></a></li>
+							</ul><!-- end links -->
+						</div>						
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>資訊連結</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="index.html">主頁</a></li>
+                            <li><a href="#about">關於聯大</a></li>
+                            <li><a href="#history">聯大歷史</a></li>
+							<li><a href="#fee">聯大費用</a></li>
+							<li><a href="#teacher">聯大師資</a></li>
+                            <li><a href="#">聯大文創</a></li>
+                            <li><a href="#">我的作品</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>聯絡細節</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="https://www.nuu.edu.tw/" target="_blank">聯大校網</a></li>
+                            <li><a href="https://enroll.nuu.edu.tw/" target="_blank">招生平台</a></li>
+                            <li><a href="https://nss.nuu.edu.tw/app/home.php" target="_blank">新生專區</a></li>
+                            <li>第一(二坪山)校區360301苗栗市恭敬里聯大1號/No.1, Lienda, Miaoli 360301, Taiwan.</li>
+                            <li>第二(八甲) 校區360302苗栗市南勢里聯大2號/No.2, Lienda, Miaoli 360302, Taiwan.</li>
+                            <li>886-37-381000</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">                   
+                    <p class="footer-company-name">Design By : <a href="https://www.facebook.com/profile.php?id=100010652352724&mibextid=ZbWKwL" target="_blank">文創系 李崇甫</a></p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+</body>
+</html>
